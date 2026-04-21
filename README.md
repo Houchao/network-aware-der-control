@@ -42,25 +42,20 @@ This research is part of a broader effort to develop integrated frameworks combi
 
 ```
 ├── stage1_ns3/                  # Stage 1: ns-3 network simulation (Linux)
-│   └── downlink_sim.cc          # ns-3 script generating per-DER delay traces
+│   └── downlink_delay.cc          # ns-3 script generating per-DER delay traces
 │                                # Output: der_downlink_delay.csv
 │
 ├── stage2_opendss/              # Stage 2: Power system simulation (Windows)
-│   ├── main.py                  # Main control loop (VPP dispatch + OpenDSS)
+│   ├── vpp_*.py                  # VPP dispatch + OpenDSS
 │   ├── opendss_wrapper.py       # OpenDSS Python interface
 │   └── live_plotter.py          # Optional real-time plotting
 │
 ├── data/                        # Input data
 │   ├── ieee37.dss               # Modified IEEE 37-node feeder model
 │   ├── P0_set.mat               # Feeder-head active power reference trajectory
-│   ├── nrel_irradiance/         # Solar irradiance data from NREL MIDC (Aug 15, 2004)
-│   └── epri_loads/              # EPRI load profiles for IEEE 37-node feeder
+│   ├── nrel_irradiance         # Solar irradiance data from NREL MIDC (Aug 15, 2004)
+│   └── epri_loads              # EPRI load profiles for IEEE 37-node feeder
 │
-├── results/                     # Simulation outputs
-│   ├── P0_ideal.npy             # Feeder-head power under ideal communication
-│   ├── P0_delay.npy             # Feeder-head power under downlink delay
-│   ├── V_allbus_ideal.npy       # Bus voltages under ideal communication
-│   └── V_allbus_delay.npy       # Bus voltages under downlink delay
 │
 └── README.md
 ```
