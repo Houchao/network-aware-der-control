@@ -1,0 +1,25 @@
+//////////////////////////////////////////////////////////   Photovoltaic (PV) array  ////////////////////////////////////////////////////////////////////////////
+
+// normalized 1 second irradiance curve for clear sky day
+//New Loadshape.MyIrrad npts=86400 sinterval=1.0000  mult=(File=Irrad_8_15_2012_1sec.csv)
+New Loadshape.MyIrrad npts=86400 sinterval=1.0000  mult=(File=Irrad_8_15_2014_1sec.csv)
+
+
+New Generator.PV4 phase=1 bus1=4 kV=4.8 kW=110 kVA=200 model=3 pf=1 Daily=MyIrrad
+New Generator.PV7 phase=1 bus1=7 kV=4.8 kW=110 KVA=200 model=3 pf=1 Daily=MyIrrad
+New Generator.PV10 phase=1 bus1=10 kV=4.8 kW=110 kVA=300 model=3 pf=1 Daily=MyIrrad
+New Generator.PV13 phase=1 bus1=13 kV=4.8 kW=110 kVA=200 model=3 pf=1 Daily=MyIrrad
+New Generator.PV17 phase=1 bus1=17 kV=4.8 kW=110 kVA=200 model=3 pf=1 Daily=MyIrrad
+New Generator.PV20 phase=1 bus1=20 kV=4.8 kW=110 kVA=200 model=3 pf=1 Daily=MyIrrad
+New Generator.PV22 phase=1 bus1=22 kV=4.8 kW=110 kVA=200 model=3 pf=1 Daily=MyIrrad
+New Generator.PV23 phase=1 bus1=23 kV=4.8 kW=110 kVA=200 model=3 pf=1 Daily=MyIrrad
+New Generator.PV26 phase=1 bus1=26 kV=4.8 kW=110 kVA=200 model=3 pf=1 Daily=MyIrrad
+New Generator.PV29 phase=1 bus1=29 kV=4.8 kW=110 kVA=200 model=3 pf=1 Daily=MyIrrad
+New Generator.PV28 phase=1 bus1=28 kV=4.8 kW=110 kVA=200 model=3 pf=1 Daily=MyIrrad
+New Generator.PV30 phase=1 bus1=30 kV=4.8 kW=110 kVA=200 model=3 pf=1 Daily=MyIrrad
+New Generator.PV31 phase=1 bus1=31 kV=4.8 kW=110 kVA=200 model=3 pf=1 Daily=MyIrrad
+New Generator.PV33 phase=1 bus1=33 kV=4.8 kW=110 kVA=200 model=3 pf=1 Daily=MyIrrad
+New Generator.PV32 phase=1 bus1=32 kV=4.8 kW=110 kVA=350 model=3 pf=1 Daily=MyIrrad
+New Generator.PV34 phase=1 bus1=34 kV=4.8 kW=110 kVA=350 model=3 pf=1 Daily=MyIrrad
+New Generator.PV35 phase=1 bus1=35 kV=4.8 kW=110 kVA=200 model=3 pf=1 Daily=MyIrrad
+New Generator.PV36 phase=1 bus1=36 kV=4.8 kW=110 kVA=200 model=3 pf=1 Daily=MyIrrad

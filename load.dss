@@ -1,0 +1,42 @@
+//Loadshape curve 
+//single
+New LoadShape.single1 npts=86400  sinterval=1.0000 mult=(File=single1.csv) UseActual=True
+New LoadShape.single2 npts=86400  sinterval=1.0000 mult=(File=single2.csv) UseActual=True
+New LoadShape.single3 npts=86400  sinterval=1.0000 mult=(File=single3.csv) UseActual=True
+
+//mult family
+New LoadShape.mult1 npts=86400  sinterval=1.0000 mult=(File=mult1.csv) UseActual=True
+New LoadShape.mult2 npts=86400  sinterval=1.0000 mult=(File=mult2.csv) UseActual=True
+New LoadShape.mult3 npts=86400  sinterval=1.0000 mult=(File=mult3.csv) UseActual=True
+
+//church
+New LoadShape.church npts=86400  sinterval=1.0000 mult=(File=church.csv) UseActual=True
+
+// Education, K-12
+New LoadShape.education npts=86400  sinterval=1.0000 mult=(File=education.csv) UseActual=True
+
+//Hotel
+New LoadShape.hotel npts=86400  sinterval=1.0000 mult=(File=hotel.csv) UseActual=True
+
+//Office, Large
+New LoadShape.office1 npts=86400  sinterval=1.0000 mult=(File=office1.csv) UseActual=True
+
+//Office, Medium
+New LoadShape.office2 npts=86400  sinterval=1.0000 mult=(File=office2.csv) UseActual=True
+
+//Office, Small
+New LoadShape.office3 npts=86400  sinterval=1.0000 mult=(File=office3.csv) UseActual=True
+
+! spot loads
+New Load.2 Bus1=2 Phases=1 Conn=Delta Model=1 kV=4.8 kW=40.0 kVAR=20.0 class=1 Daily=church
+New Load.5 Bus1=5 Phases=1 Conn=Delta Model=1 kV=4.8 kW=40.0 kVAR=20.0 class=1 Daily=single1
+New Load.7 Bus1=7 Phases=1 Conn=Delta Model=1 kV=4.8 kW=40.0 kVAR=20.0 class=1 Daily=single2
+New Load.11 Bus1=11 Phases=1 Conn=Delta Model=1 kV=4.8 kW=41.0 kVAR=21.0 class=1 Daily=single3
+New Load.13 Bus1=13 Phases=1 Conn=Delta Model=4 kV=4.8 kW=42.0 kVAR=21.0 class=1 Daily=mult1
+New Load.18 Bus1=18 Phases=1 Conn=Delta Model=1 kV=4.8 kW=42.0 kVAR=21.0 class=1 Daily=mult2
+New Load.22 Bus1=22 Phases=1 Conn=Delta Model=2 kV=4.8 kW=42.0 kVAR=21.0 class=1 Daily=mult3
+New Load.26 Bus1=26 Phases=1 Conn=Delta Model=1 kV=4.8 kW=42.0 kVAR=21.0 class=1 Daily=education
+New Load.28 Bus1=28 Phases=1 Conn=Delta Model=1 kV=4.8 kW=42.0 kVAR=21.0 class=1 Daily=hotel
+New Load.32 Bus1=32 Phases=1 Conn=Delta Model=4 kV=4.8 kW=42.0 kVAR=21.0 class=1 Daily=office3
+New Load.33 Bus1=33 Phases=1 Conn=Delta Model=1 kV=4.8 kW=42.0 kVAR=21.0 class=1 Daily=office2
+New Load.36 Bus1=36 Phases=1 Conn=Delta Model=1 kV=4.8 kW=42.0 kVAR=21.0 class=1 Daily=office1

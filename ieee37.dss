@@ -1,0 +1,55 @@
+Clear
+
+! Note that this is a 3-wire delta system. 
+! Node voltages in OpenDSS are normally line-ground and may give strange-looking results
+! Be careful if you put line-neutral connected loads or other devices on this circuit.
+
+New object=circuit.ieee37
+~ basekv=4.8 pu=1.00 MVAsc3=200000 MVAsc1=210000
+
+! import line codes with phase impedance matrices
+Redirect        IEEELineCodes.dss
+
+! Lines
+New Line.L35    Phases=1 Bus1=sourcebus Bus2=2  LineCode=721  Length=1.85
+New Line.L1     Phases=1 Bus1=2  Bus2=3  LineCode=722  Length=0.96
+New Line.L2     Phases=1 Bus1=3  Bus2=4  LineCode=724  Length=0.4
+New Line.L3     Phases=1 Bus1=3  Bus2=7  LineCode=723  Length=0.36
+New Line.L4     Phases=1 Bus1=3  Bus2=17  LineCode=722  Length=1.32
+New Line.L5     Phases=1 Bus1=17  Bus2=18  LineCode=724  Length=0.24
+New Line.L6     Phases=1 Bus1=17  Bus2=22  LineCode=723  Length=0.6
+New Line.L7     Phases=1 Bus1=8  Bus2=9  LineCode=724  Length=0.08
+New Line.L8     Phases=1 Bus1=8  Bus2=11  LineCode=723  Length=0.8
+New Line.L9     Phases=1 Bus1=4  Bus2=6  LineCode=724  Length=0.32
+New Line.L10    Phases=1 Bus1=4  Bus2=5  LineCode=724  Length=0.24
+New Line.L11    Phases=1 Bus1=15  Bus2=16  LineCode=724  Length=0.28
+New Line.L12    Phases=1 Bus1=12  Bus2=14  LineCode=724  Length=0.76
+New Line.L13    Phases=1 Bus1=12  Bus2=13  LineCode=724  Length=0.12
+New Line.L14    Phases=1 Bus1=25  Bus2=27  LineCode=723  Length=0.32
+New Line.L15    Phases=1 Bus1=25  Bus2=26  LineCode=724  Length=0.32
+New Line.L16    Phases=1 Bus1=23  Bus2=24  LineCode=723  Length=0.6
+New Line.L17    Phases=1 Bus1=23  Bus2=25  LineCode=723  Length=0.32
+New Line.L18    Phases=1 Bus1=34  Bus2=36  LineCode=724  Length=0.2
+New Line.L19    Phases=1 Bus1=34  Bus2=35  LineCode=724  Length=1.28
+New Line.L20    Phases=1 Bus1=31  Bus2=32  LineCode=723  Length=0.4
+New Line.L21    Phases=1 Bus1=31  Bus2=33  LineCode=724  Length=0.2
+New Line.L22    Phases=1 Bus1=7  Bus2=8  LineCode=723  Length=0.52
+New Line.L23    Phases=1 Bus1=9  Bus2=10  LineCode=724  Length=0.52
+New Line.L24    Phases=1 Bus1=11  Bus2=12  LineCode=724  Length=0.92
+New Line.L25    Phases=1 Bus1=11  Bus2=15  LineCode=723  Length=0.6
+New Line.L26    Phases=1 Bus1=18  Bus2=19  LineCode=723  Length=0.28
+New Line.L27    Phases=1 Bus1=22  Bus2=23  LineCode=723  Length=0.2
+New Line.L28    Phases=1 Bus1=27  Bus2=28  LineCode=723  Length=0.56
+New Line.L29    Phases=1 Bus1=28  Bus2=29  LineCode=723  Length=0.64
+New Line.L30    Phases=1 Bus1=28  Bus2=34  LineCode=724  Length=0.52
+New Line.L31    Phases=1 Bus1=29  Bus2=30  LineCode=723  Length=0.4
+New Line.L32    Phases=1 Bus1=30  Bus2=31  LineCode=723  Length=0.4
+New Line.L33    Phases=1 Bus1=19  Bus2=21  LineCode=724  Length=0.2
+New Line.L34    Phases=1 Bus1=19  Bus2=20  LineCode=724  Length=0.28
+
+//define loads
+Redirect load.dss
+Redirect pv.dss
+
+Set VoltageBases = "230,4.8,0.48"
+CalcVoltageBases
