@@ -34,7 +34,6 @@ This research is part of a broader effort to develop integrated frameworks combi
 - Evaluation of a primal-dual VPP dispatch algorithm under both ideal and realistic downlink delay conditions
 - A hold-last-value rollback strategy: when a DER does not receive a dual-variable update within a control step, it reuses the last successfully received values
 - Demonstration that communication delays cause pronounced oscillations in feeder-head power and voltage limit excursions
-- Solar generation profiles derived from real NREL MIDC irradiance measurements
 
 ---
 
