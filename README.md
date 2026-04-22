@@ -183,8 +183,3 @@ This project is released under the MIT License.
 
 ---
 
-## Contact
-
-Houchao Gan  
-Department of Computer Science, City University of New York  
-hgan@gradcenter.cuny.edu
