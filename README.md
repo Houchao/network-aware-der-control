@@ -167,11 +167,14 @@ Solar irradiance data is obtained from the **National Renewable Energy Laborator
 If you use this code in your research, please cite:
 
 ```bibtex
-@article{gan2025network,
-  title={A Network-Aware Evaluation of Distributed Energy Resource Control in Smart Distribution Systems},
-  author={Gan, Houchao},
-  institution={City University of New York},
-  year={2025}
+@article{gan2026networkawareevaluationdistributedenergy,
+      title={A Network-Aware Evaluation of Distributed Energy Resource Control in Smart Distribution Systems}, 
+      author={Houchao Gan},
+      year={2026},
+      eprint={2604.19715},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2604.19715}, 
 }
 ```
 
